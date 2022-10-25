@@ -10,12 +10,17 @@ describe('PasswordValidator', () => {
     expect(result).toBe(false);
   });
 
-  it('should return false if password does not contain a capital letter', () =>{
+  it('should return false if password does not contain a capital letter', () => {
     const result = passwordValidator.validate('av3_241q9');
 
     expect(result).toBe(false);
-  })
-  // it('should return false if password', () =>{})
+  });
+
+  it('should return false if password does not contains a lowercase', () => {
+    const result = passwordValidator.validate('AV3_241Q9');
+
+    expect(result).toBe(false);
+  });
   // it('should return false if password', () =>{})
   // it('should return false if password', () =>{})
   // it('should return false if password', () =>{})
