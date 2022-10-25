@@ -27,12 +27,11 @@ describe('PasswordValidator', () => {
     expect(result).toBe(false);
   });
 
-  it('should return false if password', () =>{})
-  // it('should return false if password', () =>{})
-  // it('should return false if password', () =>{})
-  // it('should return false if password', () =>{})
-  // it('should return false if password', () =>{})
-  // it('should return false if password', () =>{})
+  it('should return false if password does not contains an underscore', () => {
+    const result = passwordValidator.validate('AV3abcdefgh9');
+
+    expect(result).toBe(false);
+  });
 
   it('should return true if password is valid', () => {
     const result = passwordValidator.validate('Av3_241q9');
