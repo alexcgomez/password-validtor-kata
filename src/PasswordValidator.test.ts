@@ -21,8 +21,13 @@ describe('PasswordValidator', () => {
 
     expect(result).toBe(false);
   });
-  // it('should return false if password', () =>{})
-  // it('should return false if password', () =>{})
+  it('should return false if password does not contains a number', () => {
+    const result = passwordValidator.validate('AV_abcdefgh');
+
+    expect(result).toBe(false);
+  });
+
+  it('should return false if password', () =>{})
   // it('should return false if password', () =>{})
   // it('should return false if password', () =>{})
   // it('should return false if password', () =>{})
