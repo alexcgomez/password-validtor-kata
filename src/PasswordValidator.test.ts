@@ -3,16 +3,29 @@ import { PasswordValidator } from './PasswordValidator';
 describe('PasswordValidator', () => {
 
   const passwordValidator = new PasswordValidator();
-  const password = '1234567';
 
   it('should return false if password has less or equal than 8 characters', () => {
-    const result = passwordValidator.validate(password);
+    const result = passwordValidator.validate('12345678');
 
     expect(result).toBe(false);
   });
 
-  it('should return true if password has more than 8 characters', () => {
-    const result = passwordValidator.validate('123456789');
+  it('should return false if password does not contain a capital letter', () =>{
+    const result = passwordValidator.validate('av3_241q9');
+
+    expect(result).toBe(false);
+  })
+  // it('should return false if password', () =>{})
+  // it('should return false if password', () =>{})
+  // it('should return false if password', () =>{})
+  // it('should return false if password', () =>{})
+  // it('should return false if password', () =>{})
+  // it('should return false if password', () =>{})
+  // it('should return false if password', () =>{})
+  // it('should return false if password', () =>{})
+
+  it('should return true if password is valid', () => {
+    const result = passwordValidator.validate('Av3_241q9');
 
     expect(result).toBe(true);
   });
